@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registration <Form></Form></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Merriweather:wght@300&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <h1>Login <span class="smart_text"></span></h1>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script>
+        var typed = new Typed(".smart_text", {
+          strings: ["/Registration Form", "/Registration Form", "/Registration Form", "/Registration Form"],
+          typeSpeed: 100,
+          backSpeed: 100,
+          loop: true,
+        });
+      </script>
+
+      <div class="form-box">
+        <div class="button">
+          <div id="btn-color"></div>
+          <button type="button" class="btn" onclick="login()">Login</button>
+          <button type="button" class="btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="icons">
+          <img src="img/fb.png" alt="" />
+          <img src="img/tw.png" alt="" />
+          <img src="img/gp.png" alt="" />
+        </div>
+        <form action="/login" class="input-grp" id="login" method="post">
+          <input
+            type="text"
+            name="email"
+            class="input-field"
+            placeholder="Enter Email"
+            required
+          />
+          <input
+            type="text"
+            name="password"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <!-- <input type="checkbox" class="check-box" name="" id=""><span>Remember Password</span> -->
+          <button type="submit" class="submit-btn"><b>Login</b></button>
+        </form>
+        <form action="/register" class="input-grp" id="register" method="post">
+          <input type="text" name="name" class="input-field" placeholder="Name" required />
+          <input type="email" name="email" class="email" placeholder=" Email id" required />
+          <input type="text" name="password" class="input-field" placeholder="Enter Password" />
+          <!-- <input type="checkbox" class="check-box" name="" id=""><span>I agree terms and conditions</span> -->
+          <button type="submit" class="submit-btn"><b> Register</b></button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn-color");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>
